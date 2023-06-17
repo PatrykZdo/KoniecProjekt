@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="240.0" spacing="10.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SceneController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="240.0" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SceneController">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="203.0" text="Nowy Pracownik" textAlignment="CENTER">
          <font>

@@ -72,12 +72,11 @@ public class DodajSamochodController {
             return false;
         }else {
             try{
-            String url = "jdbc:sqlite:D:/dam rade/Programowanie_Projekt/sqlite-tools-win32-x86-3420000/BazaDanychProjekt.db";
+            String url = "jdbc:sqlite:C:\\Users\\rdxzse\\IdeaProjects\\KoniecProjekt\\demo\\src\\main\\resources\\com\\example\\demo\\BazaDanychProjekt.db";
             Connection connection = DriverManager.getConnection(url);
             PreparedStatement st = connection.prepareStatement("SELECT nr_vin FROM samochody where nr_vin = ?");
             st.setString(1, nr_vin.getText());
             ResultSet resultSet = st.executeQuery();
-            System.out.println(resultSet.getString("nr_vin"));
             if (resultSet.next()) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Bład dodania samochodu");
@@ -111,7 +110,7 @@ public class DodajSamochodController {
     @FXML
     private void dodajPojazd(ActionEvent event) throws IOException, SQLException {
         try {
-            String url = "jdbc:sqlite:D:/dam rade/Programowanie_Projekt/sqlite-tools-win32-x86-3420000/BazaDanychProjekt.db";
+            String url = "jdbc:sqlite:C:\\Users\\rdxzse\\IdeaProjects\\KoniecProjekt\\demo\\src\\main\\resources\\com\\example\\demo\\BazaDanychProjekt.db";
             Connection connection = DriverManager.getConnection(url);
             PreparedStatement st = connection.prepareStatement("INSERT INTO Samochody (nr_vin,marka,model,rocznik,przebieg,pojemnosc,kod_silnika,kod_skrzyni,kod_lakieru,uwagi) values(?,?,?,?,?,?,?,?,?,?)");
             st.setString(1, nr_vin.getText());

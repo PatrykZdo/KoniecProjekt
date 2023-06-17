@@ -82,7 +82,7 @@ public class DodajCzesciController implements Initializable {
     @FXML
     private void dodajCzesc(ActionEvent event) throws IOException, SQLException {
         try {
-            String url = "jdbc:sqlite:D:/dam rade/Programowanie_Projekt/sqlite-tools-win32-x86-3420000/BazaDanychProjekt.db";
+            String url = "jdbc:sqlite:C:\\Users\\rdxzse\\IdeaProjects\\KoniecProjekt\\demo\\src\\main\\resources\\com\\example\\demo\\BazaDanychProjekt.db";
             Connection connection = DriverManager.getConnection(url);
             PreparedStatement st = connection.prepareStatement("INSERT INTO Czesci (nr_vin_samochodu,nazwa,miejsce_magazynowe,cena) values(?,?,?,?)");
             st.setString(2, nazwa.getText());
@@ -144,7 +144,7 @@ public class DodajCzesciController implements Initializable {
 
         String sql = "Select * from Samochody ";
 
-        String url = "jdbc:sqlite:D:/dam rade/Programowanie_Projekt/sqlite-tools-win32-x86-3420000/BazaDanychProjekt.db";
+        String url = "jdbc:sqlite:C:\\Users\\rdxzse\\IdeaProjects\\KoniecProjekt\\demo\\src\\main\\resources\\com\\example\\demo\\BazaDanychProjekt.db";
         Connection conn = null;
         conn = DriverManager.getConnection(url);
         try{

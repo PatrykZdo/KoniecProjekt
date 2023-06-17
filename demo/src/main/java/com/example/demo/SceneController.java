@@ -74,7 +74,7 @@ public class SceneController {
 
     private boolean emailExists(String email) throws SQLException {
         try {
-            String url = "jdbc:sqlite:D:/dam rade/Programowanie_Projekt/sqlite-tools-win32-x86-3420000/BazaDanychProjekt.db";
+            String url = "jdbc:sqlite:C:\\Users\\rdxzse\\IdeaProjects\\KoniecProjekt\\demo\\src\\main\\resources\\com\\example\\demo\\BazaDanychProjekt.db";
             Connection connection = DriverManager.getConnection(url);
             PreparedStatement st = connection.prepareStatement("SELECT * FROM Pracownicy where email = ?");
             st.setString(1, email);
@@ -90,7 +90,7 @@ public class SceneController {
 
     private boolean passwordCorrect(String email, String password) throws SQLException{
         try {
-            String url = "jdbc:sqlite:D:/dam rade/Programowanie_Projekt/sqlite-tools-win32-x86-3420000/BazaDanychProjekt.db";
+            String url = "jdbc:sqlite:C:\\Users\\rdxzse\\IdeaProjects\\KoniecProjekt\\demo\\src\\main\\resources\\com\\example\\demo\\BazaDanychProjekt.db";
             Connection connection = DriverManager.getConnection(url);
             PreparedStatement st = connection.prepareStatement("SELECT * FROM Pracownicy where email = ? and haslo = ?");
             st.setString(1, email);
@@ -165,7 +165,7 @@ public class SceneController {
             System.out.println(hashPassword);
 
             if(checkingEmail(newemail) && checkingPassword(password , repeatPassword) && checkingPhoneNumber(phoneNumber)){
-                String url = "jdbc:sqlite:D:/dam rade/Programowanie_Projekt/sqlite-tools-win32-x86-3420000/BazaDanychProjekt.db";
+                String url = "jdbc:sqlite:C:\\Users\\rdxzse\\IdeaProjects\\KoniecProjekt\\demo\\src\\main\\resources\\com\\example\\demo\\BazaDanychProjekt.db";
                 Connection connection = DriverManager.getConnection(url);
                 PreparedStatement prst = connection.prepareStatement("INSERT INTO Pracownicy(email,imie,nazwisko,haslo,nr_telefonu) values(?,?,?,?,?)");
                 prst.setString(1,newemail);
@@ -186,7 +186,7 @@ public class SceneController {
 
     private boolean checkingEmail( String newemail) throws SQLException {
         try {
-            String url = "jdbc:sqlite:D:/dam rade/Programowanie_Projekt/sqlite-tools-win32-x86-3420000/BazaDanychProjekt.db";
+            String url = "jdbc:sqlite:C:\\Users\\rdxzse\\IdeaProjects\\KoniecProjekt\\demo\\src\\main\\resources\\com\\example\\demo\\BazaDanychProjekt.db";
             Connection conn = DriverManager.getConnection(url);
             if (newemail.length() > 6) {
                 ResultSet rs = null;
@@ -243,7 +243,6 @@ public class SceneController {
             boolean matchFound = matcher.find();
             if(matchFound){
                 if(hash.hashingPassword(password).equals(hash.hashingPassword(repeatPassword))){
-                    System.out.println("Haslo jest git");
                     return true;
                 }
                 else{
@@ -252,7 +251,6 @@ public class SceneController {
                     alert.setContentText("Hasła sie nie zgadzaja. Sprawdź jeszcze raz hasła!");
                     alert.show();
 
-                    System.out.println("Niezgodnosc hasel");
                     return false;
                 }
             }
@@ -261,8 +259,6 @@ public class SceneController {
                 alert.setTitle("Błąd hasła");
                 alert.setContentText("W haśle brakuje znaku. Wymagane znaki : \n - Wielka litera\n -Mała Litera \n - @,#,$,%,^,&,+,= \n - Cyfra [0-9]");
                 alert.show();
-
-                System.out.println("W twoim hasle brakuje jakiegoś znaku" + password);
                 return false;
             }
         }else{
@@ -272,14 +268,11 @@ public class SceneController {
             alert.setContentText("Hasło musi zawierać minimum 6 znaków");
             alert.show();
 
-
-            System.out.println("za którtkie haslo");
             return false;
         }
     }
 
     private boolean checkingPhoneNumber(String phoneNumber){
-        System.out.println(phoneNumber);
         if((phoneNumber.length() < 9 && !phoneNumber.equals("0")) || phoneNumber.length() > 9){
             Alert alert= new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Błąd");

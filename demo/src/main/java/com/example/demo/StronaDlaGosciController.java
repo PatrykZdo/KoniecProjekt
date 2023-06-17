@@ -52,7 +52,7 @@ public class StronaDlaGosciController implements Initializable {
         ObservableList<Produkty> Produkty = tabela.getItems();
         Produkty.clear();
 
-        String url = "jdbc:sqlite:D:/dam rade/Programowanie_Projekt/sqlite-tools-win32-x86-3420000/BazaDanychProjekt.db";
+        String url = "jdbc:sqlite:C:\\Users\\rdxzse\\IdeaProjects\\KoniecProjekt\\demo\\src\\main\\resources\\com\\example\\demo\\BazaDanychProjekt.db";
         Connection conn = null;
         conn = DriverManager.getConnection(url);
         ResultSet rs = null;
@@ -92,7 +92,7 @@ public class StronaDlaGosciController implements Initializable {
     @FXML
     private void showKontakt(ActionEvent event) throws SQLException {
 
-        String url = "jdbc:sqlite:D:/dam rade/Programowanie_Projekt/sqlite-tools-win32-x86-3420000/BazaDanychProjekt.db";
+        String url = "jdbc:sqlite:C:\\Users\\rdxzse\\IdeaProjects\\KoniecProjekt\\demo\\src\\main\\resources\\com\\example\\demo\\BazaDanychProjekt.db";
         String Wiadomosc = "";
         Connection conn = null;
         conn = DriverManager.getConnection(url);
@@ -122,7 +122,7 @@ public class StronaDlaGosciController implements Initializable {
         Produkty = FXCollections.observableArrayList();
         ResultSet rs = null;
 
-        String url = "jdbc:sqlite:D:/dam rade/Programowanie_Projekt/sqlite-tools-win32-x86-3420000/BazaDanychProjekt.db";
+        String url = "jdbc:sqlite:C:\\Users\\rdxzse\\IdeaProjects\\KoniecProjekt\\demo\\src\\main\\resources\\com\\example\\demo\\BazaDanychProjekt.db";
         Connection conn = null;
         conn = DriverManager.getConnection(url);
         try{

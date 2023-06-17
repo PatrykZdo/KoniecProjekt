@@ -61,7 +61,7 @@ public class WydrukujEtykieteController implements Initializable {
 
         String sql = "Select s.marka, s.model, s.rocznik, c.nazwa, c.miejsce_magazynowe , s.nr_vin, c.id_czesci from Samochody s join Czesci c on c.nr_vin_samochodu = s.nr_vin ";
 
-        String url = "jdbc:sqlite:D:/dam rade/Programowanie_Projekt/sqlite-tools-win32-x86-3420000/BazaDanychProjekt.db";
+        String url = "jdbc:sqlite:C:\\Users\\rdxzse\\IdeaProjects\\KoniecProjekt\\demo\\src\\main\\resources\\com\\example\\demo\\BazaDanychProjekt.db";
         Connection conn = null;
         conn = DriverManager.getConnection(url);
         try{
@@ -108,7 +108,7 @@ public class WydrukujEtykieteController implements Initializable {
         Connection conn ;
         ResultSet rs = null;
         try {
-            String url = "jdbc:sqlite:D:/dam rade/Programowanie_Projekt/sqlite-tools-win32-x86-3420000/BazaDanychProjekt.db";
+            String url = "jdbc:sqlite:C:\\Users\\rdxzse\\IdeaProjects\\KoniecProjekt\\demo\\src\\main\\resources\\com\\example\\demo\\BazaDanychProjekt.db";
             conn = DriverManager.getConnection(url);
             PreparedStatement st = conn.prepareStatement("SELECT sciezka from etykiety where id_czesci = ?");
             st.setString(1, dane.getId_czesci());

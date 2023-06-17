@@ -14,14 +14,12 @@ public class KodKreskowy {
         try {
 
             String text = id_czesci + nr_vin + miejsce;
-            path = "C:\\Users\\2patr\\OneDrive\\Pulpit\\kodkreskowy\\"+ text +".jpg";
+            path = "C:\\Users\\rdxzse\\IdeaProjects\\KoniecProjekt\\demo\\src\\main\\resources\\com\\example\\demo\\KodyKreskowe\\"+ text +".jpg";
 
             Code128Writer writer = new Code128Writer();
             BitMatrix matrix = writer.encode(text, BarcodeFormat.CODE_128, 500, 300);
 
             MatrixToImageWriter.writeToPath(matrix, "jpg", Paths.get(path));
-
-            System.out.println("Barcode created...");
             return path;
 
         } catch(Exception e) {

@@ -9,7 +9,7 @@ public class Connect {
         Connection conn = null;
 
         try{
-            String url = "jdbc:sqlite:D:/dam rade/Programowanie_Projekt/sqlite-tools-win32-x86-3420000/BazaDanychProjekt.db";
+            String url = "jdbc:sqlite:C:\\Users\\rdxzse\\IdeaProjects\\KoniecProjekt\\demo\\src\\main\\resources\\com\\example\\demo\\BazaDanychProjekt.db";
             conn = DriverManager.getConnection(url);
             System.out.println("Connection to SQLite has been establised.");
             return conn;
