@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+
+<TableView fx:id="tabela" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0" prefWidth="950.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="com.example.demo.ListaSamochodowController">
+  <columns>
+    <TableColumn fx:id="nr_vin" prefWidth="75.0" text="Numer Vin" />
+    <TableColumn fx:id="marka" prefWidth="75.0" text="Marka" />
+      <TableColumn fx:id="model" prefWidth="75.0" text="Model" />
+      <TableColumn fx:id="rok" prefWidth="75.0" text="Rok Produkcji" />
+      <TableColumn fx:id="przebieg" prefWidth="75.0" text="Przebieg" />
+      <TableColumn fx:id="pojemnosc" prefWidth="75.0" text="Pojemnosc" />
+      <TableColumn fx:id="kSilnika" prefWidth="75.0" text="Kod_Silnika" />
+      <TableColumn fx:id="kSkrzyni" prefWidth="75.0" text="Kod_Skrzyni" />
+      <TableColumn fx:id="kLakieru" prefWidth="75.0" text="Kod_Lakieru" />
+  </columns>
+   <columnResizePolicy>
+      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+   </columnResizePolicy>
+</TableView>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane minHeight="650.0" minWidth="900.0" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.WydrukujEtykieteController">
+   <children>
+      <TableView fx:id="tabela" layoutX="14.0" layoutY="14.0" prefHeight="474.0" prefWidth="874.0">
+        <columns>
+            <TableColumn fx:id="nazwa" prefWidth="318.0" text="Nazwa Części" />
+          <TableColumn fx:id="marka" minWidth="0.0" prefWidth="174.0" text="Marka" />
+          <TableColumn fx:id="model" minWidth="0.0" prefWidth="159.0" text="Model" />
+            <TableColumn fx:id="rocznik" prefWidth="84.0" text="Rocznik" />
+            <TableColumn fx:id="miejsceMagazynowe" prefWidth="138.0" text="Miejsce Magazynowe" />
+        </columns>
+      </TableView>
+      <Button layoutX="417.0" layoutY="558.0" mnemonicParsing="false" onAction="#drukuj" text="Wydrukuj" />
+      <Button layoutX="826.0" layoutY="583.0" mnemonicParsing="false" onAction="#powrotDoMenu" text="MENU" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.225752508361204" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="735.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.StronaDlaGosciController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="14.0" prefHeight="53.0" prefWidth="106.0" text="Filtry" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfMarka" layoutX="7.0" layoutY="85.0" promptText="Marka" />
+            <TextField fx:id="tfModel" layoutX="7.0" layoutY="119.0" promptText="Model" />
+            <TextField fx:id="tfRocznik" layoutX="7.0" layoutY="152.0" promptText="Rocznik" />
+            <TextField fx:id="tfCena" layoutX="7.0" layoutY="186.0" promptText="Maksymalna Cena" />
+            <Button layoutX="36.0" layoutY="240.0" mnemonicParsing="false" onAction="#Wyszukiwanie" prefHeight="25.0" prefWidth="95.0" text="Zastosuj Filtry" />
+            <Button fx:id="buttonKontakt" layoutX="53.0" layoutY="456.0" mnemonicParsing="false" onAction="#showKontakt" text="Kontakt" />
+            <Button fx:id="wyjscie" layoutX="53.0" layoutY="490.0" mnemonicParsing="false" onAction="#wyjscie" text="Wyjście" />
+            <Label fx:id="Kontakt" alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="303.0" prefHeight="119.0" prefWidth="149.0" textAlignment="CENTER" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <TextField fx:id="tfSzukaj" layoutX="61.0" layoutY="27.0" prefHeight="25.0" prefWidth="344.0" promptText="Jakiej części szukasz?" />
+            <Button layoutX="421.0" layoutY="27.0" mnemonicParsing="false" onAction="#Wyszukiwanie" prefHeight="25.0" prefWidth="83.0" text="Szukaj" />
+            <TableView fx:id="tabela" layoutX="61.0" layoutY="69.0" prefHeight="446.0" prefWidth="443.0">
+              <columns>
+                <TableColumn fx:id="nazwa" prefWidth="150.0" text="Nazwa" />
+                <TableColumn fx:id="marka" prefWidth="100.0" text="Marka" />
+                  <TableColumn fx:id="model" prefWidth="100.0" text="Model" />
+                  <TableColumn fx:id="cena" prefWidth="92.0" text="Cena" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

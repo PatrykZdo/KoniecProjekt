@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" fillWidth="false" prefHeight="340.0" prefWidth="240.0" spacing="10.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SceneController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" text="CRASH CAR" />
+   <TextField fx:id="emailLogin" promptText="E-mail" />
+   <PasswordField fx:id="passwordLogin" promptText="haslo" />
+   <Label graphicTextGap="0.0" pickOnBounds="false" prefHeight="13.0" prefWidth="122.0" text="Załóż nowe konto pracownika!">
+      <font>
+         <Font size="9.0" />
+      </font>
+   </Label>
+   <Hyperlink fx:id="NewEmployeeHyperlink" onAction="#switchToNewEmployeeScene" text="Nowy Pracownik">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </Hyperlink>
+    <Button onAction="#Login" text="ZALOGUJ" />
+   <Separator prefWidth="200.0" />
+   <Label fx:id="welcomeText1" prefHeight="66.0" prefWidth="119.0" text="Jeżeli nie masz konta &#10;to zaloguj sie jako " textAlignment="CENTER" wrapText="true" />
+   <Hyperlink fx:id="GuestHyperlink" onAction="#LoginAsGuest" text="GOŚĆ" />
+</VBox>
