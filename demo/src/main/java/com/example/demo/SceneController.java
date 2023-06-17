@@ -162,7 +162,6 @@ public class SceneController {
             String familyName = newEmployeeFamilyName.getText();
 
             String hashPassword = hash.hashingPassword(password);
-            System.out.println(hashPassword);
 
             if(checkingEmail(newemail) && checkingPassword(password , repeatPassword) && checkingPhoneNumber(phoneNumber)){
                 String url = "jdbc:sqlite:C:\\Users\\rdxzse\\IdeaProjects\\KoniecProjekt\\demo\\src\\main\\resources\\com\\example\\demo\\BazaDanychProjekt.db";
@@ -174,7 +173,6 @@ public class SceneController {
                 prst.setString(4,hashPassword);
                 prst.setInt(5,Integer.parseInt(phoneNumber));
                 prst.executeUpdate();
-                System.out.println("utworzono konto");
                 connection.close();
             }
         } catch (SQLException e) {
